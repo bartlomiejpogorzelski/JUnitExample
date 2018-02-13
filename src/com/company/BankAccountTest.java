@@ -14,7 +14,9 @@ public class BankAccountTest {
 
     @Test
     public void withDraw() throws Exception {
-        fail("This test has yet to be implemented");
+        BankAccount account=new BankAccount("Tim", "Buchalka", 1000.00);
+        account.withDraw(200.00, true);
+        assertEquals(800.00, account.getBalance(),0);
     }
 
     @Test
