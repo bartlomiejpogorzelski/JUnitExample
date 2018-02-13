@@ -26,4 +26,10 @@ public class BankAccountTest {
         assertEquals(1200.00, account.getBalance(),0);
     }
 
+    @Test
+    public void isChecking(){
+        BankAccount account=new BankAccount("Tim", "Buchalka", 1000.00, BankAccount.CHECKING);
+        assertTrue("The account is not checking", account.isChecking());
+    }
+
 }
