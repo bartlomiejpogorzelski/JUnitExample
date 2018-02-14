@@ -16,7 +16,14 @@ public class BankAccountTest {
     public static void beforeClass(){
     System.out.println("Before classes "+ count++);
     }
-
+    @org.junit.AfterClass
+    public static void afterClass(){
+        System.out.println("After classes "+ count++);
+    }
+    @org.junit.After
+    public void after(){
+        System.out.println("After: "+ count++);
+    }
     @Test
     public void deposit() throws Exception {
         BankAccount account=new BankAccount("Tim", "Buchalka", 1000.00);
