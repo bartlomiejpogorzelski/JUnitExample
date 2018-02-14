@@ -10,7 +10,7 @@ public class BankAccountTest {
     private static int count=0;
     @org.junit.Before
     public void setup(){
-    System.out.println("Running test... " + count++);
+    System.out.println("Running test... " );
     }
     @org.junit.BeforeClass
     public static void beforeClass(){
