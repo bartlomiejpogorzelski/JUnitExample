@@ -1,10 +1,22 @@
 package com.company;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class BankAccountTest {
+    private static int count=0;
+    @org.junit.Before
+    public void setup(){
+    System.out.println("Running test... " + count++);
+    }
+    @org.junit.BeforeClass
+    public static void beforeClass(){
+    System.out.println("Before classes "+ count++);
+    }
+
     @Test
     public void deposit() throws Exception {
         BankAccount account=new BankAccount("Tim", "Buchalka", 1000.00);
@@ -31,5 +43,4 @@ public class BankAccountTest {
         BankAccount account=new BankAccount("Tim", "Buchalka", 1000.00, BankAccount.CHECKING);
         assertTrue("The account is not checking", account.isChecking());
     }
-
 }
