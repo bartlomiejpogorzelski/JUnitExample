@@ -41,7 +41,6 @@ public class BankAccountTest {
     public void withDraw_NotBranch() throws Exception {
         BankAccount account=new BankAccount("Tim", "Buchalka", 1000.00);
         account.withDraw(600.00, false);
-        assertEquals(400.00, account.getBalance(),0);
     }
     @Test
     public void getBalance() throws Exception {
